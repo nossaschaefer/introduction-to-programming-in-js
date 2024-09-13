@@ -19,7 +19,7 @@ console.log(25 / 5 === 50 / 10);
 
 // TODO: implement welcomeMsg function
 function welcomeMsg(name) {
-  console.log("Welcome " + name);
+  return "Welcome " + name;
 }
 
 console.log(welcomeMsg("Jane"));
@@ -46,3 +46,42 @@ console.log(addPositive(3, -5));
 
 console.log(addPositive(-1, -8));
 // result2 should be 9
+
+// Spot the errors and fix them
+
+let userName = "Brad";
+userName = "Jenna";
+
+function getUserNameLength(userName) {
+  return userName.length;
+}
+
+console.log(getUserNameLength(userName) > 4);
+// ^______________ Should log true
+
+console.log("Breakline");
+// Implement a isString function.
+
+//  The function has one parameter which could be any kind of data type
+//  The function is written as a function expression
+//  The function returns a boolean. It returns only true, when the data type is a string otherwise it will return false
+// TODO: Implement the isString function
+
+let isString = function (anyDataType) {
+  return typeof anyDataType === "string";
+};
+
+console.log(isString("Hello"));
+// result should be true
+
+console.log(isString(3));
+// result should be false
+
+console.log(isString(undefined));
+// result should be false
+
+console.log(isString(""));
+// result should be true
+
+console.log(isString("John" + "Doe"));
+// result should be true
