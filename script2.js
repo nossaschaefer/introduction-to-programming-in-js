@@ -1,3 +1,4 @@
+console.log("Arrays");
 // 06) - arrays
 // 01) removeItem function
 // Implement a removeItem function.
@@ -48,6 +49,7 @@ function sumOfCharacters(arr) {
 
 const arr = ["Hello", "1", " "];
 console.log(sumOfCharacters(arr));
+// result should be: 7
 
 const arr1 = ["Luke", "Anakin", true, "Obi Wan", 333];
 console.log(sumOfCharacters(arr1));

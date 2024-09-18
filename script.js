@@ -130,6 +130,7 @@ function oddEven(number) {
   }
 }
 
+console.log("03) oldYoung function");
 // 03) oldYoung function
 // Implement a oldYoung function.
 
@@ -139,6 +140,18 @@ function oddEven(number) {
 //  Otherwise return "elder person"
 //  If the number is not a number or a negative number a string invalid parameter
 // TODO: Implement the oldYoung function
+
+function oldYoung(number) {
+  if (number < 0 || typeof number !== "number") {
+    return "invalid parameter";
+  } else if (number < 16) {
+    return "children";
+  } else if (number < 50) {
+    return "young person";
+  } else {
+    return "elder person";
+  }
+}
 
 console.log(oldYoung(27));
 // result should be young person
@@ -155,18 +168,6 @@ console.log(oldYoung(86));
 console.log(oldYoung("hi"));
 // result should be elder person
 
-function oldYoung(number) {
-  if (number < 0 || typeof number !== "number") {
-    return "invalid parameter";
-  } else if (number < 16) {
-    return "children";
-  } else if (number < 50) {
-    return "young person";
-  } else {
-    return "elder person";
-  }
-}
-
 console.log("oddNumbersFunction");
 // 01) oddNumbers function
 // Implement a oddNumbers function.
@@ -176,6 +177,18 @@ console.log("oddNumbersFunction");
 //  Store all oddNumbers in string, seperated by a comma and return the string.
 //  Allowed are only positive numbers, add a check.
 // TODO: Implement the oddNumbers function
+let result = "" + 4 + ",";
+
+console.log(typeof result);
+
+function oddNumbers(num1, num2) {
+  result = "";
+  for (let i = --num1; i <= num2; i++) {
+    if (i % 2 !== 0 && i > 0) {
+      console.log(i + result);
+    }
+  }
+}
 
 console.log(oddNumbers(0, 4));
 // result should be: 1,3
@@ -185,16 +198,6 @@ console.log(oddNumbers(10, 33));
 
 console.log(oddNumbers(9, 12));
 // result should be: 9,11
-
-function oddNumbers(num1, num2) {
-  for (let i = ++num1; i < num2; i++) {
-    if (i % 2 !== 0 && i > 0) {
-      console.log(i);
-    }
-  }
-}
-
-console.log(oddNumbers(0, 4));
 
 console.log("charCount function");
 // 02) charCount function
@@ -229,34 +232,3 @@ console.log(charCount("mama", "m"));
 
 console.log(charCount("Resümee", "e"));
 // result should be: 3
-
-const coolColors = ["hotpink", "doderblue", "peachpuff"];
-coolColors.splice(1, 2, "indigo");
-console.log(coolColors);
-
-console.log("Arrays");
-// 06) - arrays
-// Prepare
-//  Create a new folder and prepare an index.html file that executes a script.js files.
-// 01) removeItem function
-// Implement a removeItem function.
-
-//  The first parameter is an array.
-//  The second parameter is a number. It's the non-zero-based index of the item that should get deleted.
-//  Remove the item and return an array.
-//  Ensure that the original array was not mutated.
-// TODO: Implement the removeItem function
-
-const animals = ["Dog", "Cat", "Lion"];
-console.log(removeItem(animals, 1));
-// result should be: ["Cat", "Lion"]
-
-console.log(animals);
-// result should be still: ["Dog", "Cat", "Lion"]
-
-const fruits = ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"];
-console.log(removeItem(fruits, 3));
-// result should be: ["Watermelon", "Banana", "Kiwi", "Pineapple", "Apple"]
-
-console.log(fruits);
-// result should be still: ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"]
